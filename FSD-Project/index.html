@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="logo.png" alt="Instagram Logo" class="logo">
+            <div class="tabs">
+                <button class="tab" onclick="showLoginForm()">Login</button>
+                <button class="tab" onclick="showSignupForm()">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button onclick="login()">Log In</button>
+                <div class="forgot-password">
+                    <a href="#" onclick="showForgotPasswordForm()">Forgot Password?</a>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="form">
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button onclick="signup()">Sign Up</button>
+            </div>
+
+            <!-- Forgot Password Form -->
+            <div id="forgot-password-form" class="form">
+                <input type="email" id="forgot-email" placeholder="Enter your email" required>
+                <button onclick="resetPassword()">Reset Password</button>
+                <div class="back-to-login">
+                    <a href="#" onclick="showLoginForm()">Back to Login</a>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p>By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
